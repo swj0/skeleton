@@ -10,7 +10,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 
 
-public class War extends SpringBootServletInitializer{
+public class War extends SpringBootServletInitializer{//支持打成war包,注意pom的修改
 	@Override
 	protected SpringApplicationBuilder configure(
 			SpringApplicationBuilder builder) {
