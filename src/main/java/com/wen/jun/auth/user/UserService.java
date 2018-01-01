@@ -21,7 +21,6 @@ public class UserService {
 			return null;
 		}
     	User user = this.users.get(username);
-    	System.out.println("找到用户.....user="+user);
     	return user;
 	}
 	
