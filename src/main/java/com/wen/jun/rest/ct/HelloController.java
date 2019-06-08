@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -53,6 +54,7 @@ public class HelloController {
 
     @RequestMapping(value = "/world", produces="application/json;charset=UTF-8")
     public JsonResult world() {
+    	AbstractRoutingDataSource d;
         ArrayList<String> users =  new ArrayList<String>(){{ add("world"); }};
         return new JsonResult(true).addData("users", users);
     }
